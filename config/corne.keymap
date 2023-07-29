@@ -51,7 +51,7 @@
 // | SHFT | "|" |     |  £  |  ¤  |     |   |     |     |  {  |  }  |  *  |  _   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp TAB   &kp F_EXCL &kp F_DQUO &trans     &kp F_DLR &kp F_PERC  &kp F_AMPR &kp F_FSLH &kp F_LPRN &kp F_RPRN &kp F_EQL  &kp BSPC
+   &kp TAB   &trans &trans &trans  &trans     &trans    &trans      &kp F_FSLH &kp F_LPRN &kp F_RPRN &kp F_EQL  &kp BSPC
    &kp LCTRL &kp F_QUES &kp F_AT   &kp F_EURO &trans    &kp F_LABK  &kp F_RABK &kp F_BSLH &kp F_LBKT &kp F_RBKT &kp F_PLUS &kp F_QUOT
    &kp LSHFT &kp F_PIPE &trans     &kp F_PND  &F_CURR   &trans      &trans     &trans     &kp F_LBRC &kp F_RBRC &kp F_ASTR &kp F_UNDS
                                  &kp LGUI   &trans    &kp SPACE   &kp RET    &trans     &kp RALT
