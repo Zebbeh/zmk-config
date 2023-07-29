@@ -11,6 +11,8 @@
 
 #include "definitions.h"
 
+
+&caps_word { continue-list = <F_UNDS F_MINS BSPC RSHFT LSHFT F_UNDS F_ADIA F_ODIA F_ARNG>; };
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -31,8 +33,8 @@
                 lower_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |  UP |     |  ´  |  Å   |
-// | SHFT |     |     |     |     |     |   |     | LFT | DWN | RGT |  `  |      |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |  UP |     |     |  Å   |
+// | SHFT |     |     |     |     |     |   |     | LFT | DWN | RGT |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8   &kp N9    &kp N0     &kp BSPC
