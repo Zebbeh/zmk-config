@@ -6,12 +6,10 @@
 */
 
 // Layers:
-#define BASE  0
-#define SYM   1
-#define NUM   2
-#define ARR   3
-#define SHC   4
-#define MEDIA 5
+#define BASE 0
+#define LOWER   1
+#define RAISE   2
+#define ADJUST  3
 
 // Hold tap key timers
 #define QUICK_TAP    250
