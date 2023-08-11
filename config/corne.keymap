@@ -15,17 +15,6 @@
 
 
 / {
-    behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            quick-tap-ms = <0>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-    };
         keymap {
                 compatible = "zmk,keymap";
 
@@ -33,25 +22,25 @@
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  Ö  |  Ä   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  -  | ESC  |
+// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  -  | SHFT |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB   &kp Q          &kp W          &kp E          &kp R          &kp T     &kp Y   &kp U &kp I     &kp O   &kp P      &kp BSPC
-   &kp LCTRL &hm LCTRL A &hm LGUI S &hm LALT D &hm LSHIFT F &kp G     &kp H   &hm RSHIFT J &hm RALT K     &hm LGUI L   &hm RCTRL F_ODIA &kp F_ADIA
-   &kp LSHFT &kp Z          &kp X          &kp C          &kp V          &kp B     &kp N   &kp M &kp COMMA &kp DOT &kp F_MINS &kp ESC
-                                           &kp LGUI       &mo 1          &kp SPACE &kp RET &mo 2 &kp RALT
+   &kp TAB   &kp Q &kp W &kp E    &kp R &kp T     &kp Y   &kp U &kp I     &kp O   &kp P      &kp BSPC
+   &kp LCTRL &kp A &kp S &kp D    &kp F &kp G     &kp H   &kp J &kp K     &kp L   &kp F_ODIA &kp F_ADIA
+   &kp LSHFT &kp Z &kp X &kp C    &kp V &kp B     &kp N   &kp M &kp COMMA &kp DOT &kp F_MINS &kp LSHIFT
+                         &kp LGUI &mo 1 &kp SPACE &kp RET &mo 2 &kp RALT
                         >;
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |     |  1  |  2  |  3  |     |   |     |     | UP  |  ´  |  `  | BKSP |
-// |      |     |  4  |  5  |  6  |  0  |   |     | LFT | DWN | RGT |  '  |  Å   |
-// | SHFT |     |  7  |  8  |  9  |     |   |     |     |  ;  |  :  |  _  |      |
+// |  TAB |  1  |  2  |  3  |  4  |  5  |   |     |     | UP  |  ´  |  `  | BKSP |
+// |      |  6  |  7  |  8  |  9  |  0  |   |     | LFT | DWN | RGT |  '  |  Å   |
+// | SHFT |     |     |     |     |     |   |     |     |  ;  |  :  |  _  | ESC  |
 //                    | GUI |     | SPC |   | ENT | ADJ | ALT |
                         bindings = <
-   &kp TAB    &trans &kp N1 &kp N2   &kp N3 &trans    &trans   &trans   &kp UP   &trans    &trans     &kp BSPC
-   &trans     &trans &kp N4 &kp N5   &kp N6 &kp N0    &trans   &kp LEFT &kp DOWN &kp RIGHT &kp SQT    &kp F_ARNG
-   &kp LSHFT  &trans &kp N7 &kp N8   &kp N9 &trans    &trans   &trans   &kp SEMI &kp COLON &kp F_UNDS &trans
+   &kp TAB    &kp N1 &kp N2 &kp N3   &kp N4 &kp N5    &trans   &trans   &kp UP   &trans    &trans     &kp BSPC
+   &trans     &kp N6 &kp N7 &kp N8   &kp N9 &kp N0    &trans   &kp LEFT &kp DOWN &kp RIGHT &kp SQT    &kp F_ARNG
+   &kp LSHFT  &trans &trans &trans   &trans &trans    &trans   &trans   &kp SEMI &kp COLON &kp F_UNDS &kp ESC
                             &kp LGUI &trans &kp SPACE &kp RET  &mo 3    &kp RALT
                         >;
                 };
@@ -59,13 +48,13 @@
                 raise_layer {
 // -----------------------------------------------------------------------------------------
 // |  TAB |  !  |  "  |  #  |  $  |  %  |   |  &  |  /  |  (  |  )  |  =  | BKSP |
-// | CTRL |  ~  |  @  |  €  |     |  <  |   |  >  |  \  |  [  |  ]  |  +  |  ?   |
-// | SHFT | "|" |     |  £  |  ¤  |     |   |     |     |  {  |  }  |  *  |      |
+// | CTRL |  ~  |  @  |  €  |     |  <  |   |  >  |  \  |  [  |  ]  |  +  |  *   |
+// | SHFT | "|" |     |  £  |  ¤  |     |   |     |     |  {  |  }  |  ?  |      |
 //                    | GUI | ADJ | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp TAB   &kp EXCL   &kp DQT &kp HASH   &kp DLLR   &kp PRCNT &kp AMPS &kp FSLH  &kp LPAR &kp RPAR &kp EQUAL       &kp BSPC
-   &kp LCTRL &kp TILDE  &kp AT  &kp F_EURO &trans     &kp LT    &kp GT   &kp NUBS  &kp LBKT &kp RBKT &kp KP_PLUS     &kp QMARK
-   &kp LSHFT &kp PIPE2  &trans  &kp F_PND  &kp F_CURR &trans    &trans   &trans    &kp LBRC &kp RBRC &kp KP_MULTIPLY &trans
+   &kp TAB   &kp EXCL   &kp DQT &kp HASH   &kp DLLR   &kp PRCNT &kp AMPS &kp FSLH  &kp LPAR &kp RPAR &kp EQUAL   &kp BSPC
+   &kp LCTRL &kp TILDE  &kp AT  &kp F_EURO &trans     &kp LT    &kp GT   &kp NUBS  &kp LBKT &kp RBKT &kp KP_PLUS &kp KP_MULTIPLY
+   &kp LSHFT &kp PIPE2  &trans  &kp F_PND  &kp F_CURR &trans    &trans   &trans    &kp LBRC &kp RBRC &kp QMARK   &trans
                                 &kp LGUI   &mo 3      &kp SPACE &kp RET  &trans    &kp RALT
                         >;
                 };
@@ -74,12 +63,12 @@
 // -----------------------------------------------------------------------------------------
 // | RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ |    | RGB TOG |   |  BT1  | BT2 | BT3 | BT4 | BT5 | BT CLR |
 // | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI- |    | OUT USB |   |  USB  | BLE |     |     |     |        |
-// |          |          |          |          |    | K_SLEEP |   |       |     |     |     |     | EP TOG |
+// |          |          |          |          |    |         |   |       |     |     |     |     | EP TOG |
 //                                              |     |     |     |     |     |
                         bindings = <
    &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF &none        &rgb_ug RGB_TOG           &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
    &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &none        &rgb_ug RGB_OFF           &out OUT_USB &out OUT_BLE &trans       &none        &none        &none 
-   &none           &none           &none           &none           &none        &kp K_SLEEP               &none        &none        &none        &none        &none        &ext_power EP_TOG
+   &none           &none           &none           &none           &none        &trans               &none        &none        &none        &none        &none        &ext_power EP_TOG
                                                    &trans          &trans       &trans                    &none        &trans       &trans
                         >;
                 };
