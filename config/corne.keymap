@@ -54,7 +54,7 @@
                         bindings = <
    &kp TAB   &kp F_EXLM &kp F_DQUO &kp F_HASH &kp F_DLR  &kp F_PERC &kp F_AMPR &kp F_FSLH  &kp F_LPRN &kp F_RPRN &kp F_EQL  &kp BSPC
    &kp LCTRL &kp F_TILD &kp F_AT   &kp F_EURO &trans     &kp F_LABK &kp F_RABK &kp F_BSLH  &kp F_LBKT &kp F_RBKT &kp F_PLUS &kp F_ASTR
-   &kp LSHFT &kp PIPE2  &trans     &kp F_PND  &kp F_CURR &trans     &trans     &trans      &kp F_LBRC &kp F_RBRC &kp F_QUES &trans
+   &kp LSHFT &kp F_PIPE &trans     &kp F_PND  &kp F_CURR &trans     &trans     &trans      &kp F_LBRC &kp F_RBRC &kp F_QUES &trans
                                    &kp LGUI   &mo 3      &kp SPACE  &kp RET    &trans      &kp RALT
                         >;
                 };
