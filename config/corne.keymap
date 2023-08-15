@@ -37,12 +37,12 @@
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |     |     | UP  |  ´  |  `  | BKSP |
 // |      |  6  |  7  |  8  |  9  |  0  |   |     | LFT | DWN | RGT |  '  |  Å   |
-// | SHFT |     |     |     |     |     |   |     |     |  ;  |  :  |  _  | ESC  |
+// | CAPS |     |     |     |     |     |   |     |     |  ;  |  :  |  _  | ESC  |
 //                    | GUI |     | SPC |   | ENT | ADJ | ALT |
                         bindings = <
    &kp TAB    &kp N1 &kp N2 &kp N3   &kp N4 &kp N5    &trans   &trans   &kp UP     &kp F_ACUT &kp F_GRV  &kp BSPC
    &trans     &kp N6 &kp N7 &kp N8   &kp N9 &kp N0    &trans   &kp LEFT &kp DOWN   &kp RIGHT  &kp F_QUOT &kp F_ARNG
-   &kp LSHFT  &trans &trans &trans   &trans &trans    &trans   &trans   &kp F_SCLN &kp F_COLN &kp F_UNDS &kp ESC
+   &kp CAPS  &trans &trans &trans   &trans &trans    &trans   &trans   &kp F_SCLN &kp F_COLN &kp F_UNDS &kp ESC
                             &kp LGUI &trans &kp SPACE &kp RET  &mo 3    &kp RALT
                         >;
                 };
