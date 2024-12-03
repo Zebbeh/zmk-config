@@ -3,6 +3,6 @@ id: unicorne
 name: unicorne
 type: shield
 url: https://github.com/zebbeh/unicorne/
-requires: [puchi_ble_v1]
+requires: [nice_nano_v2]
 features:
   - keys
